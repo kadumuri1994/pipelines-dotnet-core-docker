@@ -81,7 +81,7 @@ stages:
                 az aks use-dev-spaces -n $clusterName -g $resourceGroupName -s sampleaksappnamespace -y
                 $hostSuffix=$(azds show-context -o json | ConvertFrom-Json).controller.hostSuffix
                 echo "##vso[task.setvariable variable=HostSuffix]$hostSuffix"
-              failOnStderr: false
+              failOnStandardError: false
 
           - task: KubernetesManifest@0
             displayName: Bake manifests
