@@ -45,5 +45,12 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-
+- task: Docker@2
+  inputs:
+    containerRegistry: 'AzureContainerConnection'
+    repository: 'sampleaksapprepo'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    buildContext: '$(System.ArtifactsDirectory)/drop'
+    tags: 'latest'
     
