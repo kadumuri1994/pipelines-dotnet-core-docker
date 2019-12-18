@@ -49,7 +49,5 @@ steps:
     containerRegistry: 'AzureContainerConnection'
     repository: 'sampleaksapprepo'
     command: 'buildAndPush'
-    Dockerfile: 'Dockerfile'
-    buildContext: '$(System.ArtifactsDirectory)/drop'
+    Dockerfile: '**/Dockerfile'
     tags: 'latest'
-    
