@@ -32,6 +32,11 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: 'K8S\**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
@@ -44,5 +49,3 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: 'latest'
-
-    
