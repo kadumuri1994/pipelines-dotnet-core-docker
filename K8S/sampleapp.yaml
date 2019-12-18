@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: sampleapp-pod
+ labels:
+   app: sampleapp
+spec:
+  containers:
+    - name: sampleapp
+      image: sampleakscluster-dns-42e9dd63.hcp.eastus.azmk8s.io/sampleapp:latest
+      ports:
+        - containerPort: 8080
