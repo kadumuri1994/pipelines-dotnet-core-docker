@@ -38,6 +38,7 @@ steps:
     Contents: |
       bin\**
       K8S\**
+      Dockerfile
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
