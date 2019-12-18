@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'sampleaksappcontainer20656c89-auth'
 
   # Agent VM image name
-  vmImageName: 'windows-latest'
+  vmImageName: 'ubuntu-latest'
   
   # Azure Service connection
   azureConnection: '041cf974-d326-4d08-a067-eb1b5cd95552'
