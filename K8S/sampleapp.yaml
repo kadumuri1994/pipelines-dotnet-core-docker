@@ -18,7 +18,7 @@ spec:
         app: sampleapp
     spec:
       containers:
-      - image: sampleakscluster-dns-42e9dd63.hcp.eastus.azmk8s.io/sampleapp:latest
+      - image: sampleaksappcontainer.azurecr.io/sampleaksapprepo:latest
         name: sampleapp
         ports:
         - containerPort: 8080
